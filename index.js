@@ -179,3 +179,22 @@ document.querySelector("#first-game").append(firstPlacePara);
 const secondPlacePara = document.createElement("p");
 secondPlacePara.innerHTML = `${second.name}`;
 document.querySelector("#second-game").append(secondPlacePara);
+
+// Form Validation
+window.onsubmit = validateForm;
+
+function validateForm() {
+    const inputName = document.getElementById("name").value;
+    const displayDiv = document.getElementById("display-search");
+
+    const possibleGame = GAMES_JSON.find((game) => game.name === inputName);
+
+    if (possibleGame === undefined) { 
+        displayDiv.innerHTML = "No game found. Try searching for another game!";
+    } else {
+        displayDiv.innerHTML = `${possibleGame.name}: ${possibleGame.description}. 
+                                <br> Pledged: ${possibleGame.pledged} / ${possibleGame.goal}
+                                <br> Backers: ${possibleGame.backers}`;
+    }
+
+}

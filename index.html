@@ -12,7 +12,10 @@
     <div class="header">
         <img id="tentacles" src="assets/tentacles.png">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
-        <a href="#games-description-container">Our Games</a>
+        <div class="nav-links">
+            <a href="#search">Search</a>
+            <a href="#games-description-container">Our Games</a>
+        </div>
     </div>
 
     <!-- background info about company -->
@@ -61,6 +64,17 @@
     </div>
     <div id="games-container">
 
+    </div>
+
+    <div id="search">
+        <h2>Search Our Games</h2>
+        <form method="get">
+            <label>Game Name: <input type="text" id="name" /></label>
+            <button type="submit">Find Game</button>
+        </form>
+        <div id="display-search">
+
+        </div>
     </div>
 
     <script type="module" src="index.js"></script>

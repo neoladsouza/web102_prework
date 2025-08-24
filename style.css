@@ -18,11 +18,18 @@ body {
     display: flex;
     background-color: var(--main-color);
     padding: 1%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    gap: 0 2rem;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 10%;
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -105,4 +112,28 @@ h2 {
 .stats-card:hover {
     background-color: var(--main-color);
     font-size: large ;
+}
+
+#search {
+    background-color: var(--main-color);
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: 10px;
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#search h2 {
+    color: var(--accent-color);
 }

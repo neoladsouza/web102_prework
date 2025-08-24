@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+:root {
+    --main-color: lightblue;
+    --accent-color: #758190;
+}
+
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: var(--accent-color);
 }
 
 #tentacles {
@@ -11,25 +16,13 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: var(--main-color);
     padding: 1%;
+    justify-content: space-between;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
-}
-
-.stats-container {
-    display: flex;
-}
-
-.stats-card {
-    background-color: #a8b0bc;
-    border-radius: 7px;
-    padding: 1%;
-    margin: 1%;
-    width: 100%;
-    text-align: center;
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -72,4 +65,44 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+button:hover {
+    background-color: var(--main-color);
+    transition: 1s;
+}
+
+#games-description-container, #description-container {
+    text-align: center;
+}
+
+a {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+.stats-card-container {
+    display: flex;
+}
+
+.stats-card {
+    background-color: #a8b0bc;
+    border: 2px solid var(--main-color);
+    border-radius: 7px;
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.75s, font-size 0.75s;
+}
+
+.stats-card:hover {
+    background-color: var(--main-color);
+    font-size: large ;
 }

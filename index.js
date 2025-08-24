@@ -187,14 +187,14 @@ function validateForm() {
     const inputName = document.getElementById("name").value;
     const displayDiv = document.getElementById("display-search");
 
-    const possibleGame = GAMES_JSON.find((game) => game.name === inputName);
+    const possibleGame = GAMES_JSON.find((game) => game.name.toLowerCase().includes(inputName.toLowerCase()));
 
     if (possibleGame === undefined) { 
         displayDiv.innerHTML = "No game found. Try searching for another game!";
     } else {
-        displayDiv.innerHTML = `${possibleGame.name}: ${possibleGame.description}. 
-                                <br> Pledged: ${possibleGame.pledged} / ${possibleGame.goal}
-                                <br> Backers: ${possibleGame.backers}`;
+        displayDiv.innerHTML = `<strong>${possibleGame.name}:</strong> ${possibleGame.description}. 
+                                <br> <strong>Pledged:</strong> ${possibleGame.pledged} / ${possibleGame.goal}
+                                <br> <strong>Backers:</strong> ${possibleGame.backers}`;
     }
 
 }
